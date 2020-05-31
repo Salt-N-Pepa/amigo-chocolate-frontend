@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://backend-amigo-chocolate.herokuapp.com",
+    baseURL: procees.env.REACT_APP_API_URL,
 })
 
 export default api;
