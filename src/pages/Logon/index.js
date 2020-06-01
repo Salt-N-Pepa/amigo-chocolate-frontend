@@ -6,6 +6,8 @@ import api from '../../services/api';
 
 import './styles.css';
 
+import biscoito from '../../assets/biscoito.png';
+
 export default function Logon() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -35,6 +37,7 @@ export default function Logon() {
     return (
         <div className="logon-container">
             <section className="form">
+
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
     
@@ -53,11 +56,13 @@ export default function Logon() {
                     <button className="button" type="submit">Entrar</button>
     
                     <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#E02041"/>
+                        <FiLogIn size={16} color="#7c3b0c"/>
                         Não tenho cadastro
                     </Link>
                 </form>
             </section>
+
+            <img src={biscoito} alt="biscoito" />
         </div>
     )
 }

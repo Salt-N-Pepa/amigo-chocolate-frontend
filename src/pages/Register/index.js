@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi'
 
 import api from '../../services/api';
 import './styles.css';
+
+import biscoito from '../../assets/biscoito.png';
 
 export default function Register () {
     const [nome, setNome] = useState('');
@@ -13,6 +15,10 @@ export default function Register () {
     const [senha, setSenha] = useState('');
 
     const history = useHistory();
+
+    useEffect(() => {
+        document.title = `Registrar`;
+      });
 
     async function handleRegister(e) {
         e.preventDefault();
@@ -42,11 +48,13 @@ export default function Register () {
         <div className="register-container">
             <div className="content">
                 <section>
+                    <img src={biscoito} alt="biscoito"/>
+
                     <h1>Cadastro</h1>
                     <p>Faça o seu cadastro e entre nessa banheira de Nutella</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#E02041"/>
+                        <FiArrowLeft size={16} color="#7c3b0c"/>
                         Já possuo cadastro
                     </Link>
                 </section>

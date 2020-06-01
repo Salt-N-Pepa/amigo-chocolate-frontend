@@ -36,6 +36,10 @@
     color: #737380;
     line-height: 32px;
 }
+.register-container .content section img {
+    width: 40%;
+    height: auto;
+}
 
 .register-container .content form {
     width: 100%;
