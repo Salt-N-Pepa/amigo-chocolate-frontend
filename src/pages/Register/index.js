@@ -48,7 +48,7 @@ export default function Register () {
         <div className="register-container">
             <div className="content">
                 <section>
-                    <img src={biscoito} alt="biscoito"/>
+                    {/* <img src={biscoito} alt="biscoito"/> */}
 
                     <h1>Cadastro</h1>
                     <p>Faça o seu cadastro e entre nessa banheira de Nutella</p>

@@ -62,7 +62,7 @@ export default function Logon() {
                 </form>
             </section>
 
-            <img src={biscoito} alt="biscoito" />
+            {/* <img src={biscoito} alt="biscoito" /> */}
         </div>
     )
 }
