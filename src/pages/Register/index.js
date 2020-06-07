@@ -5,8 +5,6 @@ import { FiArrowLeft } from 'react-icons/fi'
 import api from '../../services/api';
 import './styles.css';
 
-import biscoito from '../../assets/biscoito.png';
-
 export default function Register () {
     const [nome, setNome] = useState('');
     const [sobrenome, setSobreNome] = useState('');
@@ -54,7 +52,7 @@ export default function Register () {
                     <p>Faça o seu cadastro e entre nessa banheira de Nutella</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#7c3b0c"/>
+                        <FiArrowLeft size={16} color="#FC0606"/>
                         Já possuo cadastro
                     </Link>
                 </section>
