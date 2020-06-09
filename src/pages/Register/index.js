@@ -49,7 +49,7 @@ export default function Register () {
                     {/* <img src={biscoito} alt="biscoito"/> */}
 
                     <h1>Cadastro</h1>
-                    <p>Faça o seu cadastro e entre nessa banheira de Nutella</p>
+                    <p>Faça o seu cadastro e entre na brincadeira</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#FC0606"/>

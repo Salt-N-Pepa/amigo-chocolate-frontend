@@ -41,6 +41,7 @@ export default function NewGroup() {
 
     return (
         <div className="new-group-container">
+            <div className="content">
             <section>
                 
                 <h1>Cadastrar novo grupo</h1>
@@ -74,6 +75,7 @@ export default function NewGroup() {
                 <button className="button" type="submit">Cadastrar</button>
 
             </form>
+            </div>
         </div>
     )
 }

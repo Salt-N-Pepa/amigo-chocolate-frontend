@@ -1,5 +1,5 @@
 .new-group-container {
-    width: 100%;
+    width: 95%;
     max-width: 1120px;
     height: 100vh;
     margin: 0 auto;
@@ -29,7 +29,6 @@
 .new-group-container .content section h1 {
     margin: 64px 0 32px;
     font-size: 32px;
-    ;
 }
 
 .new-group-container .content section p {
@@ -46,4 +45,16 @@
 .new-group-container .content form input,
 .new-group-container .content form textarea {
     margin-top: 8px;
+}
+
+@media (max-width: 760px) {
+    .new-group-container .content {
+        display: block;
+    }
+}
+
+@media (max-width: 528px) {
+    .new-group-container .content {
+        padding: 0;
+    }
 }

@@ -3,10 +3,9 @@
     max-width: 1120px;
     height: 100vh;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .logon-container img {
@@ -27,4 +26,26 @@
 .logon-container section.form h1 {
     font-size: 32px;
     margin-bottom: 32px;
+}
+
+@media (max-width: 1112px) {
+    .logon-container {
+        max-width: 777px;
+    }
+}
+
+@media (max-width: 915px) {
+    .logon-container {
+        flex-direction: column;
+        padding-top: 23px;
+        width: 90%;
+    }
+    .logon-container img {
+        order: -1;
+    }
+
+    .logon-container section.form {
+        margin-right: 0;
+    }
+
 }

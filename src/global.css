@@ -80,3 +80,25 @@ form textarea {
 .back-link:hover {
     opacity: 0.8;
 }
+
+@media (max-width: 1120px) {
+    .back-link {
+        display: inline-table;
+    }
+}
+
+@media (max-width: 655px) {
+    * {
+        margin: initial;
+        box-sizing: border-box;
+    }
+    .back-link {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 366px) {
+    .button {
+        font-size: 14px;
+    }
+}

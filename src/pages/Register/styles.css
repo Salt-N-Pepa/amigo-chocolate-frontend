@@ -57,3 +57,18 @@
 .register-container .content form .input-group input + input {
     margin-left: 8px;
 }
+
+@media (max-width: 1024px) {
+    .register-container .content {
+        display: block;
+    }
+}
+
+@media (max-width: 656px){
+    .register-container .content {
+        padding: 50px;
+    }
+    .register-container .content section h1 {
+        margin: 150px 0 32px;
+}
+}
