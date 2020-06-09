@@ -6,6 +6,8 @@ import api from '../../services/api';
 
 import './styles.css';
 
+import logo from '../../assets/logo.svg';
+
 export default function NewGroup() {
     const [nome, setNome] = useState('');
     const [valorMinimo, setValorMinimo] = useState('');
@@ -43,13 +45,14 @@ export default function NewGroup() {
         <div className="new-group-container">
             <div className="content">
             <section>
+                <img src={logo} alt="logo"/>
                 
                 <h1>Cadastrar novo grupo</h1>
                 <br />
                 <p>Cadastre seu grupo aqui!</p>
 
                 <Link className="back-link" to="/profile"> 
-                    <FiArrowLeft size={16} color="#E02041" />
+                    <FiArrowLeft size={16} color="#541919" />
                     Voltar para home
                 </Link>
 

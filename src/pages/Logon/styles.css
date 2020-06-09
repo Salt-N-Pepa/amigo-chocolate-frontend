@@ -9,8 +9,9 @@
 }
 
 .logon-container img {
-    width: 40%;
+    width: 30%;
     height:auto;
+
 }
 
 .logon-container section.form {
@@ -21,6 +22,11 @@
 
 .logon-container section.form form {
     margin-top: 10px;
+}
+
+.logon-container section.form img {
+    width: 50%;
+    height:auto;
 }
 
 .logon-container section.form h1 {
@@ -46,6 +52,10 @@
 
     .logon-container section.form {
         margin-right: 0;
+    }
+
+    .logon-container section.form img {
+        display: none;
     }
 
 }

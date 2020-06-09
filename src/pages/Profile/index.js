@@ -6,6 +6,8 @@ import api from '../../services/api';
 
 import './styles.css';
 
+import logo from '../../assets/logo.svg';
+
 export default function Profile() {
     const [ grupos, setGrupos] = useState([]);
     const history = useHistory();
@@ -72,11 +74,12 @@ export default function Profile() {
     return (
         <div className="profile-container">
             <header>
+                <img src={logo} alt="logo"/>
                 <span>Bem vindo(a), {apelido}</span>
 
                 <Link className="button" onClick={isAuthorized} to="/newgroup">Criar novo grupo</Link>
                 <button onClick={handleLogout} type="button"> 
-                    <FiPower size={18} color="#FC0606"/>
+                    <FiPower size={18} color="#541919"/>
                 </button>
             </header>
 

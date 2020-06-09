@@ -3,7 +3,10 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi'
 
 import api from '../../services/api';
+
 import './styles.css';
+
+import logo from '../../assets/logo.svg';
 
 export default function Register () {
     const [nome, setNome] = useState('');
@@ -46,13 +49,13 @@ export default function Register () {
         <div className="register-container">
             <div className="content">
                 <section>
-                    {/* <img src={biscoito} alt="biscoito"/> */}
+                    <img src={logo} alt="biscoito"/> 
 
                     <h1>Cadastro</h1>
                     <p>Faça o seu cadastro e entre na brincadeira</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#FC0606"/>
+                        <FiArrowLeft size={16} color="#541919"/>
                         Já possuo cadastro
                     </Link>
                 </section>

@@ -6,7 +6,8 @@ import api from '../../services/api';
 
 import './styles.css';
 
-import friends from '../../assets/secret_friends.png';
+import logo from '../../assets/logo.svg';
+import friends from '../../assets/couple.png';
 
 export default function Logon() {
     const [email, setEmail] = useState('');
@@ -37,6 +38,7 @@ export default function Logon() {
     return (
         <div className="logon-container">
             <section className="form">
+                <img src={logo} alt="logo"/>
 
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
@@ -56,7 +58,7 @@ export default function Logon() {
                     <button className="button" type="submit">Entrar</button>
     
                     <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#FC0606"/>
+                        <FiLogIn size={16} color="#541919"/>
                         Não tenho cadastro
                     </Link>
                 </form>

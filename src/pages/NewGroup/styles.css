@@ -21,6 +21,12 @@
     align-items: center;
 }
 
+.new-group-container .content img {
+    width: 60%;
+    max-width: 380px;
+    display: flex;
+}
+
 .new-group-container .content section {
     width: 100%;
     max-width: 380px;
@@ -50,6 +56,9 @@
 @media (max-width: 760px) {
     .new-group-container .content {
         display: block;
+    }
+    .new-group-container .content img {
+        display: none;
     }
 }
 

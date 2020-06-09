@@ -26,6 +26,9 @@
     max-width: 380px;
 }
 
+.register-container .content section img {
+    width: 70%;
+}
 .register-container .content section h1 {
     margin: 64px 0 32px;
     font-size: 32px;
@@ -61,6 +64,9 @@
 @media (max-width: 1024px) {
     .register-container .content {
         display: block;
+    }
+    .register-container .content section img {
+        display: none;
     }
 }
 
