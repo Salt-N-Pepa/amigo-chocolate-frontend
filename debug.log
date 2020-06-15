@@ -1,1 +1,31 @@
 [0607/161915.567:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 6b5e6232-eb4a-48f7-8f97-8ff5f0f6f1f9
+[0610/000420.245:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: O arquivo de paginação é muito pequeno para que esta operação seja concluída. (0x800705AF)
+[0610/000420.261:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
+[0610/000420.261:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0610/000420.284:ERROR:process_info.cc(359)] UncheckedAllocate
+[0610/020951.669:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 6b5e6232-eb4a-48f7-8f97-8ff5f0f6f1f9
+[0610/020953.884:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: Espaço insuficiente no disco. (0x80070070)
+[0610/020953.887:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
+[0610/020954.022:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0610/020954.244:ERROR:file_io.cc(134)] WriteFile: Espaço insuficiente no disco. (0x70)
+[0610/020954.244:ERROR:crash_report_database_win.cc(504)] failed to write header
+[0610/185024.294:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: O arquivo de paginação é muito pequeno para que esta operação seja concluída. (0x800705AF)
+[0610/185024.302:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
+[0610/185024.303:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0610/185024.327:ERROR:process_info.cc(359)] UncheckedAllocate
+[0610/185024.356:ERROR:file_io.cc(134)] WriteFile: Espaço insuficiente no disco. (0x70)
+[0610/185024.356:ERROR:crash_report_exception_handler.cc(142)] WriteEverything failed
+[0610/185024.357:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Alefe\AppData\Local\Microsoft\Edge\User Data\Crashpad\reports\4454f5f3-820f-4e85-9531-3468d6396bf0.dmp: O arquivo já está sendo usado por outro processo. (0x20)
+[0610/185024.851:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: Espaço insuficiente no disco. (0x80070070)
+[0610/185024.851:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
+[0610/185024.851:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0610/185024.975:ERROR:file_io.cc(134)] WriteFile: Espaço insuficiente no disco. (0x70)
+[0610/185024.975:ERROR:crash_report_exception_handler.cc(142)] WriteEverything failed
+[0610/185024.976:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Alefe\AppData\Local\Microsoft\Edge\User Data\Crashpad\reports\611c9d97-223c-4dbc-8c7e-63f886063f7c.dmp: O arquivo já está sendo usado por outro processo. (0x20)
+[0610/185457.247:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: Um dispositivo conectado ao sistema não está funcionando. (0x8007001F)
+[0610/185457.247:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
+[0610/185457.247:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0610/185457.257:ERROR:process_info.cc(359)] UncheckedAllocate
+[0612/171138.794:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 6b5e6232-eb4a-48f7-8f97-8ff5f0f6f1f9
+[0612/174210.396:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 6b5e6232-eb4a-48f7-8f97-8ff5f0f6f1f9
+[0613/162700.132:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 6b5e6232-eb4a-48f7-8f97-8ff5f0f6f1f9

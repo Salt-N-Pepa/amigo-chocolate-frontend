@@ -1,117 +1,64 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import api from '../../services/api';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
-
 export default function Profile() {
-    const [ grupos, setGrupos] = useState([]);
-    const history = useHistory();
+    const [pessoa, setPessoa] = useState([]);
 
-    const token = localStorage.getItem('token');
+    const imagem = localStorage.getItem('imagem');
     const apelido = localStorage.getItem('apelido');
+    const token = localStorage.getItem('token');
+    const id = localStorage.getItem('id');
 
     useEffect(() => {
-        api.get('grupo', {
+        api.get(`pessoa/${id}`, {
             headers: {
                 Authorization: token,
             }
         }).then(response => {
-            setGrupos(response.data.grupo);
+            console.log(response.data)
+            setPessoa(response.data);
         })
-    }, [token])
-
-
-
-    async function handleDeleteGrupo(id) {
-        try {
-            await api.delete(`grupo/${id}`, {
-                headers: {
-                    Authorization: token,
-                }
-            });
-            
-            setGrupos(grupos.filter(grupo => grupo._id !== id))
-            
-            
-        } catch (err) {
-            alert('Erro ao deletar caso, tente novamente');
-        }
-    }
-
-    async function isAuthorized () {
-        if(!token) {
-            alert("Você não tem permissão para acessar essa função");
-        }
-    }
-
-    async function handleLogout () {
-        localStorage.clear();
-
-        history.push('/')
-    }
-
-    async function handleNewFriend (id, apelido) {
-        try {
-            await api.post(`grupo/${id}/${apelido}`, {}, {
-                headers: {
-                    Authorization: token,
-                }
-            });
-
-            alert('Vocês foi cadastrado(a) com sucesso')
-            
-        } catch (err) {
-            alert('Erro ao cadastrar no grupo');
-        }
-    }
-    
+    }, [token], [id])
 
     return (
         <div className="profile-container">
-            <header>
-                <img src={logo} alt="logo"/>
-                <span>Bem vindo(a), {apelido}</span>
 
-                <Link className="button" onClick={isAuthorized} to="/newgroup">Criar novo grupo</Link>
-                <button onClick={handleLogout} type="button"> 
-                    <FiPower size={18} color="#541919"/>
-                </button>
-            </header>
+            <div className="content">
 
-            <h1>Grupos cadastrados</h1>
+                <section>
+                    <Link className="back-link" to="/home">
+                        <FiArrowLeft size={16} color="#541919" />
+                        Voltar para home
+                    </Link>
+                    <Link to="/AtualizarAvatar">
+                        <img src={imagem} alt="avatar" />
+                    </Link>
+                        <h1>"{apelido}"</h1>
+                </section>
 
-            <ul>
-                {grupos.map(grupo => (
-                    <li key={grupo._id}>
-                    <strong>Grupo</strong>
-                    <p>{grupo.nome}</p>
-
-                    <strong>VALOR MINIMO</strong>
-                    <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(grupo.valorMinimo)}</p>
-
-                    <strong>ADMINISTRADOR</strong>
-                    <p>{grupo.apelido_admin}</p>
-
-                    <Link className="button" onClick={() => handleNewFriend(grupo._id, apelido)} to="/profile">Participar do Grupo</Link>
-                    
-
-                    {
-                    apelido === grupo.apelido_admin ? 
-                        <button onClick={() => handleDeleteGrupo(grupo._id)} type="button">
-                            <FiTrash2 size={20} color="#a8a8b3" />
-                        </button> : ''}
-                    
-                </li>
-                ))}
-            </ul>
+                <ul>
+                    <li>
+                        <strong>Nome:</strong>
+                        <p>{`${pessoa.nome} ${pessoa.sobrenome}`}</p>
+                    </li>
+                    <li>
+                        <strong>Email:</strong>
+                        <p>{pessoa.email}</p>
+                    </li>
+                    <li>
+                        <strong>Lista de Desejos</strong>
+                        <p>Quero um chocolate doce, igual minha esposa</p>
+                    </li>
+                    <li>
+                        <Link className="button" to="/atualizar">Atualizar perfil</Link>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-
     )
 }
-

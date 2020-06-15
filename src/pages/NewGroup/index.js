@@ -35,7 +35,7 @@ export default function NewGroup() {
                 }
             })
 
-            history.push('/profile')
+            history.push('/home')
         } catch (err) {
             alert('Erro ao cadastrar caso, tente novametne');
         }
@@ -51,7 +51,7 @@ export default function NewGroup() {
                 <br />
                 <p>Cadastre seu grupo aqui!</p>
 
-                <Link className="back-link" to="/profile"> 
+                <Link className="back-link" to="/home"> 
                     <FiArrowLeft size={16} color="#541919" />
                     Voltar para home
                 </Link>

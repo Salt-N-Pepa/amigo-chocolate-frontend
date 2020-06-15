@@ -1,0 +1,77 @@
+.new-group-container {
+  width: 95%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-group-container .content {
+  width: 100%;
+  padding: 96px;
+  background: #f0f0f5;
+  box-shadow:  0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-group-container .content .dropzone {
+  height: 300px;
+  width: 300px;
+  background: #f0f0f5;
+  border-radius: 10px;
+
+  display: block;
+  align-items: center;
+  
+  outline: 0;
+}
+
+.new-group-container .content .dropzone img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+.new-group-container .content .dropzone p {
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  border-radius: 10px;
+  border: 1px dashed #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+
+}
+
+.new-group-container .content .dropzone p svg {
+  color: #000;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 760px) {
+  .new-group-container .content {
+      display: block;
+  }
+  .new-group-container .content img {
+      display: none;
+  }
+}
+
+@media (max-width: 528px) {
+  .new-group-container .content {
+      padding: 0;
+  }
+}

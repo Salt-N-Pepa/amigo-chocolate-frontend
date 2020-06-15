@@ -28,8 +28,10 @@ export default function Logon() {
 
             localStorage.setItem('apelido', response.data.user.apelido);
             localStorage.setItem('token', response.data.token);
+            localStorage.setItem('imagem', response.data.user.imagem);
+            localStorage.setItem('id', response.data.user._id);
 
-            history.push('/profile')
+            history.push('/home')
         } catch (err) {
             alert('Falha no LOGIN tente novamente');
         }

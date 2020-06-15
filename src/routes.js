@@ -6,6 +6,9 @@ import Logon from './pages/Logon';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import NewGroup from './pages/NewGroup';
+import Home from './pages/Home';
+import Atualizar from './pages/Atualizar';
+import AtualizarAvatar from './pages/AtualizarAvatar';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={props => (
@@ -24,8 +27,11 @@ export default function Routes() {
                 <Route path="/" exact component={Logon} />
                 <Route path="/register" component={Register} />
 
-                <PrivateRoute path="/profile" component={Profile} />
+                <PrivateRoute path="/home" component={Home} />
                 <PrivateRoute path="/newgroup" component={NewGroup} />
+                <PrivateRoute path="/profile" component={Profile} />
+                <PrivateRoute path="/atualizar" component={Atualizar} />
+                <PrivateRoute path="/atualizaravatar" component={AtualizarAvatar} />
             </Switch>
         </BrowserRouter>
     )
