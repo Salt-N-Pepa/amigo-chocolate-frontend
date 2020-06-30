@@ -108,7 +108,7 @@ export default function Home() {
                     ))}
 
                 
-                    <Link className="button" onClick={() => handleNewFriend(grupo._id, apelido)} to="/profile">Participar do Grupo</Link>
+                    <Link className="button" onClick={() => handleNewFriend(grupo._id, apelido)} to="/home">Participar do Grupo</Link>
 
                     {
                         apelido === grupo.apelido_admin ? 
