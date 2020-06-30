@@ -52,7 +52,7 @@ export default function Profile() {
                     </li>
                     <li>
                         <strong>Lista de Desejos</strong>
-                        <p>Quero um chocolate doce, igual minha esposa</p>
+                        <p>Cacau Doce</p>
                     </li>
                     <li>
                         <Link className="button" to="/atualizar">Atualizar perfil</Link>
